@@ -1,9 +1,11 @@
 <div class="todo-list">
-    <div class="item-wrap" *ngFor="let item of todos">
+    <div class="item-wrap" *ngFor="let item of todos let i=index">
+        <mat-card *ngIf="!item.isArchived" (click)="onTodoClick(item,i)"  [ngClass]={selected:item.selected,complited:item.isComplited}>
         <mat-card-title>{{item.title}}</mat-card-title>
-        <br>
+
         <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
         <mat-divider></mat-divider>
+    </mat-card>
     </div>
     <!-- <mat-card>
         <mat-card-content>Simple card</mat-card-content>

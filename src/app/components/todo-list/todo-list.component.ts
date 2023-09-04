@@ -9,6 +9,7 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit,OnDestroy{
+  i_selected:number=0
 public todos: Array<ITodo>=
 [];
 private subscription:Subscription=new Subscription();
@@ -19,11 +20,23 @@ private subscription:Subscription=new Subscription();
     this.subscription.unsubscribe()
  }
   ngOnInit(): void {
+
     this.subscription.add(this.todoService.getTodos().subscribe(data=>{
       this.todos=data,
       console.log(data)
     }
       
       ))   }
+
+      onTodoClick(todo:ITodo,index:number):void{
+          this.todoService.setSelectedTodo(todo);
+          this.todos.forEach(todo=>{
+            if(todo.selected){
+              todo.selected=false
+            }
+          })
+          this.todos[index].selected=true;
+
+      }
 
 }

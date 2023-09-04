@@ -1,0 +1,6 @@
+.selected{
+    background:rgb(138, 133, 133) ;
+}
+.complited{
+text-decoration: line-through;
+}

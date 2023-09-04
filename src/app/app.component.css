@@ -1,8 +1,17 @@
 .app .main{
-    
+    display: flex;
         padding: 10px;
-        height: calc(100vh - 64px);
+        height: calc(100vh - 84px);
     .list-continer{
 width: 25%;
+gap: 10px;
+        }
+        .todo-continer{
+              width: 75%;  
+        }
+        .add-new-todo-btn{
+                position: fixed;
+                bottom: 30px;
+                right: 30px;;
         }
 }
