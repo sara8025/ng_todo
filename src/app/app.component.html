@@ -3,18 +3,6 @@
 <div class="app">
   <app-header></app-header>
   <main class="main">
-    <div class="list-continer">
-      <app-todo-list></app-todo-list>
-    </div>
-    <div class="todo-continer">
-      <app-todo></app-todo>
-    </div>
-  
-      <button (click)="openDialog()"  class="add-new-todo-btn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-        <mat-icon>add</mat-icon>
-      </button>
-      
-  
-   
+    <app-todo-container></app-todo-container>  
   </main>
 </div>

@@ -1,0 +1,12 @@
+<div class="todos_contianer">
+    <div class="list-continer">
+        <app-todo-list [todos]="todos"></app-todo-list>
+      </div>
+      <div class="todo-continer">
+        <app-todo [todo]="todo"></app-todo>
+      </div>
+    
+        <button (click)="openDialog()"  class="add-new-todo-btn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>add</mat-icon>
+        </button>
+</div>

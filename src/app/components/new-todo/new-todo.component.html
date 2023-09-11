@@ -1,1 +1,40 @@
-<p>new-todo works!</p>
+<form  #f="ngForm" (ngSubmit)="containerTodoSubmit()">
+    
+
+ 
+
+    
+
+      <mat-form-field appearance="outline">
+        <mat-label>Todo name</mat-label>
+        <input ngModel name="title" matInput placeholder="Placeholder">
+      
+        <mat-hint>Todo name</mat-hint>
+      </mat-form-field>
+<br>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input ngModel name="description" matInput placeholder="Placeholder">
+   
+        <mat-hint>Description</mat-hint>
+      </mat-form-field>
+
+      <!-- <mat-form-field >
+        <mat-label>Date</mat-label>
+        <input ngModel name="Date" matInput [matDatepicker]="dp3" disabled>
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="dp3"></mat-datepicker-toggle>
+        <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+      </mat-form-field> -->
+<br>
+      <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input ngModel name="date" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+<br>
+<button type="submit" mat-raised-button color="warn">submit</button>
+
+</form> 
