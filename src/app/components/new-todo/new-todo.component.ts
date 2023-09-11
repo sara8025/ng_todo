@@ -18,6 +18,7 @@ export class NewTodoComponent {
   public containerTodoSubmit():void{
     // create new object to send it to service
     const formValus =this.form.form.value
+    if(this.form.valid){
     const newTodo:ITodo={
       
       id:uuidv4(),
@@ -34,6 +35,8 @@ export class NewTodoComponent {
     console.log(this.form)
     console.log('On submit')
   }
+}
+
 
 }
 
